@@ -3,7 +3,7 @@ package datastructure;
 public class IsomorphicString {
 
     public static void main(String[] args) {
-        System.out.println(isIsomorphic("add","egg"));
+        System.out.println(isIsomorphic("foo","bar"));
     }
     public static boolean isIsomorphic(String s, String t) {
 
@@ -14,7 +14,6 @@ public class IsomorphicString {
             if(sArr[s.charAt(i)] != tArr[t.charAt(i)]){
                 return false;
             }
-
             sArr[s.charAt(i)] = i+1;
             tArr[t.charAt(i)] = i+1;
         }
