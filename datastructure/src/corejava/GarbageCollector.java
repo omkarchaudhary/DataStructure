@@ -1,5 +1,7 @@
 package corejava;
 
+import java.io.FileReader;
+
 public class GarbageCollector {
      GarbageCollector(){
         System.out.println("Constructor ");

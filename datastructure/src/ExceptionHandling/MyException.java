@@ -1,12 +1,25 @@
 package ExceptionHandling;
 
+import java.io.FileNotFoundException;
+import java.io.FileReader;
 import java.io.IOException;
 
 public class MyException {
     // Checked exception is compile time exception should always be handle using try catch or throws in method declaration
-    public static void main(String[] args) throws Exception {
-        ExB b = new ExB();
-        b.method1();
+    public static void main(String[] args){
+//        ExB b = new ExB();
+//        b.method1();
+        try (FileReader fileReader = new FileReader("abc")) {
+        } catch (FileNotFoundException e) {
+            throw new RuntimeException(e);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+
+    }
+
+    private static void method1() throws RuntimeException{
+
     }
 }
 
