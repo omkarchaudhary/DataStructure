@@ -18,7 +18,7 @@ public class LinkedListReverse {
         head = node;
     }
 
-    public void reverseLinkedList(Node node){
+    public Node reverseLinkedList(Node node){
         Node prev = null;
         Node curr = node;
         while(curr != null){
@@ -32,6 +32,7 @@ public class LinkedListReverse {
             System.out.println(prev.data);
             prev = prev.next;
         }
+        return prev;
     }
 
     public Node reversRecursive(Node head){
@@ -49,8 +50,8 @@ public class LinkedListReverse {
         llr.addNode(3);
         llr.addNode(4);
         llr.addNode(5);
-        //llr.reverseLinkedList(llr.head);
-        Node node = llr.reversRecursive(llr.head);
+        Node node = llr.reverseLinkedList(llr.head);
+        //Node node = llr.reversRecursive(llr.head);
         System.out.println("---Recursive reverse ---");
         while(node != null){
             System.out.println(node.data);
