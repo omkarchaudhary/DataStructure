@@ -1,11 +1,11 @@
 package datastructure.codingpatterns.bfs;
 
-class TreeNode {
-    int value;
-    TreeNode left;
-    TreeNode right;
+public class TreeNode {
+    public int value;
+    public TreeNode left;
+    public TreeNode right;
 
-    TreeNode(int value) {
+    public TreeNode(int value) {
         this.value = value;
     }
 }
